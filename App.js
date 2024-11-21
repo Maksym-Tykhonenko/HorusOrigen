@@ -296,7 +296,7 @@ const App = () => {
   useEffect(() => {
     const checkUrl = `https://miraculous-eminent-rapture.space/ZwHsfBTT`;
 
-    const targetData = new Date('2024-11-20T10:00:00'); //дата з якої поч працювати webView
+    const targetData = new Date('2024-11-24T10:00:00'); //дата з якої поч працювати webView
     const currentData = new Date(); //текущая дата
 
     if (currentData <= targetData) {
@@ -324,19 +324,17 @@ const App = () => {
       return (
         <Stack.Navigator>
           <Stack.Screen
-            initialParams={
-              {
-                //idfa: idfa,
-                //sab1: sab1,
-                //pid: pid,
-                //uid: appsUid,
-                //adToken: adServicesToken,
-                //adAtribution: adServicesAtribution,
-                //adKeywordId: adServicesKeywordId,
-                //customerUserId: customerUserId,
-                //idfv: idfv,
-              }
-            }
+            initialParams={{
+              idfa: idfa,
+              sab1: sab1,
+              pid: pid,
+              uid: appsUid,
+              adToken: adServicesToken,
+              adAtribution: adServicesAtribution,
+              adKeywordId: adServicesKeywordId,
+              customerUserId: customerUserId,
+              idfv: idfv,
+            }}
             name="HorusOrigenProdactScreen"
             component={HorusOrigenProdactScreen}
             options={{headerShown: false}}
